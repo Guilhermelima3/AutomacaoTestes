@@ -5,7 +5,7 @@ Funcionalidade: Cadastro de Usuários
     Quero fazer o meu cadastro
     Para que eu possa ouvir minhas músicas favoritas
 
-    @happy
+   
     Cenario: Cadastro
         Dado que acesso a página de cadastro
         Quando submeto o meu cadastro com:
@@ -14,37 +14,19 @@ Funcionalidade: Cadastro de Usuários
             |senha_confirma|senha123|
         Então devo ser redirecionado para a área logada
     
-    @temp
-    Cenario: Email não informado
+   
+    Esquema do Cenário: Tentativa de Cadastro
         Dado que acesso a página de cadastro
         Quando submeto o meu cadastro com:
-            |email||
-            |senha|senha123|
-            |senha_confirma|senha123|
-        Então devo ver a mensagem: "Oops! Informe seu email."    
-     
-    Cenario: senha não informada
-        Dado que acesso a página de cadastro
-        Quando submeto o meu cadastro com:
-            |email|usuarioteste@hotmail.com|
-            |senha||
-            |senha_confirma||
-        Então devo ver a mensagem: "Oops! Informe sua senha."    
+            |email         |<email>         |
+            |senha         |<senha>         |
+            |senha_confirma|<senha_confirma>|
+        Então devo ver a mensagem: "<mensagem_saida>"    
 
-
-    Cenario: Senha divergente
-        Dado que acesso a página de cadastro
-        Quando submeto o meu cadastro com:
-            |email|usuarioteste@hotmail.com|
-            |senha|senha123|
-            |senha_confirma|qnlw321|
-        Então devo ver a mensagem: "Opps! Senhas não são iguais."  
-      
-    Cenario: Nenhum campo preenchido
-        Dado que acesso a página de cadastro
-        Quando submeto o meu cadastro com:
-            |email||
-            |senha||
-            |senha_confirma||
-        Então devo ver a mensagem: "Opps! Informe seu email e sua senha."
-  
+    Exemplos:
+        |email                   | senha   | senha_confirma| mensagem_saida                      |
+        |                        |senha123 |senha123       | Oops! Informe seu email.            |
+        |usuarioteste@hotmail.com|         |               | Oops! Informe sua senha.            |
+        |usuarioteste@hotmail.com| senha123| abc123        | Opps! Senhas não são iguais.        |
+        |                        |         |               | Opps! Informe seu email e sua senha.|
+   
