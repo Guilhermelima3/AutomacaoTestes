@@ -93,6 +93,7 @@ GEM
       rspec-support (~> 3.10.0)
     rspec-support (3.10.2)
     rubyzip (2.3.0)
+    rufo (0.12.0)
     selenium-webdriver (3.142.7)
       childprocess (>= 0.5, < 4.0)
       rubyzip (>= 1.2.2)
@@ -114,6 +115,7 @@ DEPENDENCIES
   cucumber (~> 5.3)
   httparty (~> 0.18.1)
   rspec (~> 3.10)
+  rufo (~> 0.12.0)
   selenium-webdriver (~> 3.142, >= 3.142.7)
 
 BUNDLED WITH
