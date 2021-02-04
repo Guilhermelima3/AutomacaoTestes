@@ -19,7 +19,17 @@ Então("devo ser redirecionado para a área logada") do
   expect(page).to have_css ".dashboard"
 end
 
-Então("devo ver a mensagemm:{string}") do |string|
+Então("devo ver a mensagemm:{string}") do |expect_message|
   alert = find(".message p")
   expect(alert.text).to eql expect_message
+end
+
+Quando("acesso a pagina de cadastro") do
+  steps %(
+    Dado que acesso a página de cadastro
+  )
+end
+
+Entao("deve exibir o seguinte css: {string}") do |expect_css|
+  expect(page).to have_css expect_css
 end

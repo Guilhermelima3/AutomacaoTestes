@@ -29,4 +29,8 @@ Funcionalidade: Cadastro de Usuários
             | usuarioteste@hotmail.com |          |                | Oops! Informe sua senha.             |
             | usuarioteste@hotmail.com | senha123 | abc123         | Opps! Senhas não são iguais.         |
             |                          |          |                | Opps! Informe seu email e sua senha. |
+    @temp
+    Cenario: Validação do campo email
 
+        Quando acesso a pagina de cadastro
+        Entao deve exibir o seguinte css: "input[type=email]"
