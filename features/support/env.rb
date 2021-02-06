@@ -3,8 +3,10 @@ require "capybara"
 require "capybara/cucumber"
 
 require_relative "helper"
+require_relative "actions"
 
 World(Helpers)
+World(Actions)
 
 Capybara.configure do |config|
   #selenium Driver
