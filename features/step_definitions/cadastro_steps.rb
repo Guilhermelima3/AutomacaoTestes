@@ -1,5 +1,5 @@
 Dado("que acesso a página de cadastro") do
-  visit "http://parodify.qaninja.com.br"
+  visit "/"
   click_on "EXPERIMENTE AGORA"
 end
 

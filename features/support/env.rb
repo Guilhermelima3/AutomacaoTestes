@@ -11,6 +11,7 @@ Capybara.configure do |config|
   config.default_driver = :selenium_chrome
   #time exec
   config.default_max_wait_time = 10
+  config.app_host = "http://parodify.qaninja.com.br"
 end
 
 #Armazenando relatorios apenas dos ultimos testes rodados
