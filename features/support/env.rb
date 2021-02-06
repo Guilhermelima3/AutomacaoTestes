@@ -12,3 +12,9 @@ Capybara.configure do |config|
   #time exec
   config.default_max_wait_time = 10
 end
+
+#Armazenando relatorios apenas dos ultimos testes rodados
+AllureCucumber.configure do |config|
+  config.results_directory = "/logs"
+  config.clean_results_directory = true
+end

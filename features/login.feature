@@ -5,6 +5,7 @@ Funcionalidade: Login de Usuários
     Quero acessar o sistema com meu email e senha
     Para que eu possa ter acesso as playlists do Parodify
 
+    @smoke
     Cenario: Login do usuario
         Dado que acesso a página Login
         Quando submeto minhas credenciais com: "guilhermelima@hotmail.com" e "senha321"

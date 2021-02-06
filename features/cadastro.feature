@@ -14,7 +14,6 @@ Funcionalidade: Cadastro de Usuários
             | senha_confirma | senha123                 |
         Então devo ser redirecionado para a área logada
 
-    @smoke
     Esquema do Cenário: Tentativa de Cadastro
         Dado que acesso a página de cadastro
         Quando submeto o meu cadastro com:
