@@ -17,6 +17,7 @@ Quando("toco a seguinte canção:") do |table|
   @parody = table.rows_hash
 
   find("a", text: @parody[:banda]).click
+
   song = find(".song-item", text: @parody[:parodia])
   song.find(".fa-play-circle").click
 end

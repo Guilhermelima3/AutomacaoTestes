@@ -14,7 +14,7 @@ Funcionalidade: Cadastro de Usuários
             | senha_confirma | senha123                 |
         Então devo ser redirecionado para a área logada
 
-
+    @smoke
     Esquema do Cenário: Tentativa de Cadastro
         Dado que acesso a página de cadastro
         Quando submeto o meu cadastro com:
@@ -27,9 +27,9 @@ Funcionalidade: Cadastro de Usuários
             | email                    | senha    | senha_confirma | mensagem_saida                       |
             |                          | senha123 | senha123       | Oops! Informe seu email.             |
             | usuarioteste@hotmail.com |          |                | Oops! Informe sua senha.             |
-            | usuarioteste@hotmail.com | senha123 | abc123         | Opps! Senhas não são iguais.         |
-            |                          |          |                | Opps! Informe seu email e sua senha. |
-    @temp
+            | usuarioteste@hotmail.com | senha123 | abc123         | Oops! Senhas não são iguais.         |
+            |                          |          |                | Oops! Informe seu email e sua senha. |
+
     Cenario: Validação do campo email
 
         Quando acesso a pagina de cadastro

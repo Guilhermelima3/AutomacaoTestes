@@ -24,6 +24,11 @@ Então("devo ver a mensagemm:{string}") do |expect_message|
   expect(alert.text).to eql expect_message
 end
 
+Então("devo ver a mensagem: {string}") do |expect_message|
+  alert = find(".message p")
+  expect(alert.text).to eql expect_message
+end
+
 Quando("acesso a pagina de cadastro") do
   steps %(
     Dado que acesso a página de cadastro

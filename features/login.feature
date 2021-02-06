@@ -7,7 +7,7 @@ Funcionalidade: Login de Usuários
 
     Cenario: Login do usuario
         Dado que acesso a página Login
-        Quando submeto minhas credenciais com: "usuarioteste@hotmail.com" e "senha123"
+        Quando submeto minhas credenciais com: "guilhermelima@hotmail.com" e "senha321"
         Então devo ser redirecionado para a área logada
 
     Esquema do Cenario: Tentativa de Login
@@ -16,8 +16,8 @@ Funcionalidade: Login de Usuários
         Então devo ver a mensagem de erro: "Opps! Dados de acesso incorretos!"
 
         Exemplos:
-            | email              | senha    |
-            | usuario@teste.com  | senh321  |
-            |                    |          |
-            | usuario@teste2.com |          |
-            |                    | senha321 |
+            | email                     | senha    |
+            | guilhermel@hotmail.com    | senha321 |
+            |                           |          |
+            | guilhermelima@hotmail.com |          |
+            |                           | senha321 |
