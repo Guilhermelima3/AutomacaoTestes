@@ -1,3 +1,4 @@
+require "allure-cucumber"
 require "capybara"
 require "capybara/cucumber"
 
